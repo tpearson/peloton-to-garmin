@@ -55,7 +55,7 @@ jobs:
           },
           "Peloton": {
             "NumWorkoutsToDownload": ${{ github.event.inputs.workoutsToDownload || env.DEFAULT_WORKOUT_NUM }},
-            "BearerToken": "${{ secrets.P2G_GARMIN__BEARERTOKEN }}"
+            "BearerToken": "${{ secrets.P2G_PELOTON__BEARERTOKEN }}"
           },
           "Garmin": {
             "Upload": true,
@@ -94,5 +94,6 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
 
